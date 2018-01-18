@@ -1,6 +1,6 @@
 # Data-Science-Lab-ee379k
 
-# Code written by John Sigmon and Amanraj Mahal for EE379k Data Science Lab #
+### Code written by John Sigmon and Amanraj Mahal for EE379k Data Science Lab ###
 
 This code contains labs written for the above class. The repo requires a virtual env, and contains a requirements file.
 
