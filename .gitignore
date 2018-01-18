@@ -1,0 +1,12 @@
+##################################################
+# Ignore autosaves/checkpoints
+*checkpoint*
+
+# Ignore virtualenv 
+bin
+include
+lib
+local
+share
+*selfcheck.json
+
