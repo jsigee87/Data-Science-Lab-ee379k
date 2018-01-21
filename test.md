@@ -1,6 +1,7 @@
 ## Installation
 
-It is recommended to install on Ubuntu 16.04. You will have to install the dependencies, then SimSpark and rcssserver3d, and finally roboviz and utaustinvilla3d.
+It is recommended to install on Ubuntu 16.04. You will have to install the dependencies, then SimSpark and rcssserver3d, and finally RoboViz and utaustinvilla3d.
+
 
 ### Installing Dependencies
 
@@ -16,9 +17,11 @@ Then run
 sudo apt-get update
 ```
 
+
 ### Installing SimSpark and rcssserver3d
 
 You will have to manually download and install SimSpark and rcssserver3d. It is recommended to build them from the source. The following will walk you through this part.
+
 
 #### Install SimSpark
 ```bash
@@ -35,6 +38,7 @@ Go get a coffee
 sudo make install
 sudo ldconfig
 ```
+
 
 #### Install rcssserver3d
 ```bash
@@ -59,8 +63,10 @@ sudo gedit /etc/ld.so.conf
 sudo ldconfig
 ```
 
+
 ### Install RoboViz and UT Austin Villa RoboCup 3D
 The following instructions will walk you through installing RoboViz and UT Austin Villa RoboCup 3D into your home directory under robocup3d. 
+
 
 #### Install RoboViz
 ```bash
@@ -79,6 +85,7 @@ mkdir roboviz
 curl -sL https://github.com/magmaOffenburg/RoboViz/releases/download/1.3.0/linux32.tar.gz tar xz -C roboviz
 ```
 
+
 #### Install UT Austin Villa RoboCup 3D
 ```bash
 cd
@@ -89,7 +96,9 @@ cmake .
 make
 ```
 
+
 ## Installation Troubleshooting
+
 
 ### Common Issues:
 
@@ -112,10 +121,12 @@ sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)
 conda uninstall libtiff
 ```
 
+
 ### Issues with SimSpark or rcssserver3d:
 
 More information on SimSpark can be found here
 https://gitlab.com/robocup-sim/SimSpark/wikis/Installation-on-Linux
+
 
 ### Issues with Roboviz:
 
