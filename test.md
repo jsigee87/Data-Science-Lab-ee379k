@@ -20,7 +20,7 @@ sudo apt-get update
 
 ### Installing SimSpark and rcssserver3d
 
-You will have to manually download and install SimSpark and rcssserver3d. It is recommended to build them from the source. The following will walk you through this part.
+The following instructions will walk you through the installation of SimSpark and rcssserver3d.
 
 
 #### Install SimSpark
@@ -102,19 +102,23 @@ make
 
 ### Common Issues:
 
-* Ensure that /usr/local/bin is on your path
+* Check if /usr/local/bin is on your path
 ```bash
 echo $PATH
 ```
-If it is not then add it to your ~/.bashrc
+  If it is not then add it to your ~/.bashrc
 ```bash
 echo "PATH=\$PATH:/usr/local/bin" >> ~/.bashrc
 ```
+
+
 
 * Enable universe and multiverse
 ```bash
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
 ```
+
+
 
 * If you have an Anaconda distribution and get a build failure try running 
 ```bash
