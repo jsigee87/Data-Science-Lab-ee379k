@@ -13,3 +13,4 @@ share
 # Ignore word temp files
 ~$*
 *TMP*
+*.tmp
