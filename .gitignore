@@ -14,3 +14,9 @@ share
 ~$*
 *TMP*
 *.tmp
+
+# Ignore automatically generated documents for 
+# notebook to pdf conversion
+output?????.png
+output????.png
+notebook.tex
