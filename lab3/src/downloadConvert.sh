@@ -1,9 +1,9 @@
 #!/bin/bash
 
 URL=$1
-TARGET=$2
+FILENAME=$2
 
-curl $URL > $TARGET.pdf
+curl $URL > $FILENAME.pdf
 
 # Catch abnormal curl behavior
 if [ $? != 0 ]
@@ -13,10 +13,22 @@ then
 fi
 
 
-pdftotext $TARGET.pdf
+pdftotext $FILENAME.pdf
+
+# Remove non ASCII characters 
+#sed -i 's/[\d128-\d255]//g' $FILENAME.txt
+
+# Delete all single characters by themselves
+# (note- this may remove the word "I", but 
+# can be modified)
+#awk 'length!=1' $FILENAME.txt > ($FILENAME)_stripped.txt
+
+# TODO decide if you want to operate on the stripped file
+# or not. If you want to modify the file in place without
+# creating a new file, rewrite as awk -i 'leng....
 
 # Clean up after yourself
-rm -rf $TARGET.pdf
+rm -rf $FILENAME.pdf
 
 
 
