@@ -1,0 +1,138 @@
+\documentclass{book}
+\title{Linear Algebra Notes}
+\date{2/19/18}
+\author{John Sigmon}
+\usepackage{amsmath}
+
+\begin{document}
+\maketitle
+	
+\newpage
+	
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{Why another Linear Algebra Book?}
+		Surely there are enough linear algebra books out there. This set of notes was written for two purposes. First and foremost was to help me solidify my own understanding, and bring together all that I had learned about linear algebra into one place. I have found that linear algebra is best understand through analogies, and not repeated calculations. The act of writing out my notes has substantially increased my understanding of the subject. 
+		The second purpose, and why you are reading this, is to help bridge the gap in linear algebra knowledge for a third or fourth year student, or graduate student for whom their first course in linear algebra was either too long ago, or insufficient. 
+		For these reason, this text will likely only serve as a mediocre reference. It is best used to sit and read like a book, in the hope that new explanations and analogies can help to deepen your understanding. The only prerequisites are a (possibly rusty) understanding of basic linear algebra and matrix algebra.
+		A few suggestions on getting the most out of reading this text:
+		When you encounter something new, try to explain it in as many different ways as possible in terms of things you already know. 
+		Stop to write down at least two examples and two counter-examples.
+		Go slow, and review as necessary.
+
+
+\chapter{Chapter 1}
+	
+\chapter{Chapter 2}
+\section{Understanding Vector Spaces}
+
+\subsection{Linear Combination}
+
+Definition: Linear combination
+A linear combination is a decomposition of a vector s.t. it is expressed as:
+
+$$a_1v_1 + ... + a_nv_n$$ 
+$$where \quad v_1, ... ,v_n \quad are \, vectors, \, and \quad a_1, ... ,a_n \in \pmb{F}$$
+
+We can think of a linear combination as being a vector itself, although normally it is written as the list above. This vector is the result of a list of vectors, where each vector is multiplied by a scalar, and then they are all added together. This list of vectors can also be represented in a matrix. Note that formally, the coefficients are not required to be real numbers. They could be in any field.
+
+\subsection{Span}
+
+If we take a linear combination and fix the vectors, while allowing the scalars to vary, we can denote these possible combinations as the \textbf{span} of that list of vectors. Formally, the set of all possible linear combinations is the span of that list.
+
+Definition: Span
+
+$$span(v_1,...,v_n)=\{a_1v_1 + ... + a_nv_n \,|\, a_1,...,a_n \in \pmb{F} \}$$
+
+    It turns out that this set of vectors (span) is actually a subspace. It is worth noting that that subspace is the smallest possible subspace that contains all those vectors (there are no "extra" vectors). If the span of some vectors \textit{equals} some vector space, then we can say that list of vectors \textbf{spans} that vector space. Additionally, if we say that a vector space is \textit{finite dimensional}, that means that by definition, some list of vectors span it.
+  
+  /////left off here editing
+\subsection{Linear Dependence}
+
+     We consider again a linear combination- a list of vectors, each multiplied by some element in our field, and added together. If the only way that we can force this linear combination to equal zero is to set all $a_1,...a_n$ equal to zero, then we can declare the list linearly independent. This is worth thinking about for a second. Another way to say it is, a list of vectors is linearly independent if no vectors in the list are multiples of another (then forcing their combination equal to zero would be trivial by setting all $a_i$ to zero except for the two that are multiples, etc.) Another way to think of it is if a list is linearly independent, then every vector in the span of that list can be uniquely represented by a choice of $a_1,...,a_n$. Therefore, we could think of a specific set of $a_1,...,a_n$ as a vector $\pmb{a}$, and say that vector gets mapped to a specific vector $\pmb{x}$ in the span of our list when our list is independent. Notice also that the zero vector then gets mapped to the origin, whereas a dependent list could map some $\pmb{a}$ with non-zero entries into the origin.
+
+\subsection{Basis}
+
+<body>
+   <p>
+     Suppose we have some list of vectors $v_1,...,v_n$ that is linearly independent, and also spans some vector space <i>V</i>. We can give this list a special name, a <i>basis</i>. We notice that this means we can <i>uniquely</i> write every vector in V as a linear combination of the basis. The main difference between a linearly independent list and a basis is that the basis constrains the length of the list. If we have a basis, we can say that the length of that basis determines the dimension of the vector space that it spans. 
+   </p>
+   <p>
+     $$If\,\,(v_1,...,v_n)\,\,is\,\,a\,\,basis\,\,for\,\,V,\,\,then\,\,dim(V) = n$$
+   </p>
+   <p>
+     With our definition of dimension, we can say that every linearly independent list in a vector space V that has length equal to $dim(V)$ is a basis for V. A last thought is that the basis is the fewest number of linearly independent vectors that can span the space.
+   </p>
+</body> 
+
+\chapter{Chapter 3}
+\section{Linear Maps}
+
+   A linear map from some space $V$ to another space $W$ is a function $T:V \rightarrow W$ . Because we say the map is \textit{linear}, we require that:
+
+$ T(u + v) = T(u) + T(v) $ and $ T( \lambda v) = \lambda T(v) $
+
+    Given two spaces $V$ and $W$ we can take all the possible maps from $V$ to $W$ and group them together in a set. We call this set of maps $\mathcal{L}(V,W)$ . Although we are defining maps abstractly, it may be helpful to think of how we normally take these maps to be matrices that move points from one space to different points in another space. 
+
+Remark:
+    Given a basis for $V$ ($v_b$) and a basis for $W$, ($v_w$), the map that takes $v_b$ to $w_b$ is unique! Put another way, for: $$ \pmb{T}v_b=w_b$$ it turns out that T is unique for each choice of basis $v_b$ and $w_b$.
+
+    Since technically a map is just a matrix, it makes sense that we can multiply them together. When multiplying matrices together, a useful analogy is the composition of functions. Be careful when deciding the domain and range while thinking of matrix multiplication. Roughly speaking, the number of columns is the dimension of the domain, while the number of rows is the dimension of the range.
+
+
+\chapter{Chapter 4}
+
+\chapter{Chapter 5}
+\section{Diagonalization and Similarity Transforms}
+\subsection{Similarity}
+
+    We may be interested in two matrices that have the same eigenvalues, and there exists an invertible mapping between them. We call such matrices "similar". Notice that two matrices may share eigenvalues, but not be similar, and that similar matrices must be square.
+Definition: Similar
+$\quad$Given $A$ and $B$, when there exists an invertible mapping $P$ s.t. $A\,=\,PBP^{-1}$, we say $A$ and $B$ are similar
+
+    Notice that:$$A\,=\,PBP^{-1}\quad\quad and \,\,that \quad\quad\,B\,=\,P^{-1}AP$$ So we can say that we change $A$ into $P^{-1}AP$. Something interesting is happening here though. Consider that $A \in \mathcal{L}(V,W)$. Then what can we say about the domains of our mappings $P$, $B$, and $P^{-1}$?
+    
+    Well, first we assume that $A$ goes from $V$ to $W$. Looking at $P^{-1}AP$, we must conclude that it also is a map from $V$ to $W$. However, the only way this is possible is if $P$ has   $range\,=\,V$ , due to the composition of   $A\,\circ\,P$. Then we conclude that $P^{-1}$ has   $domain\,=\,V$ . However,   $A\,\circ\,P$   has   $range\,=\,W$,   and so   $P^{-1}\circ(AP)$     only makes sense when $P^{-1}$ has   $domain\,=\,V$. Therefore, our discussion only makes sense when   $V\,=\,W$ . And so it must be the case that   $A \in \mathcal{L}(V,V)$. (Do not be ashamed to draw this out with blobs of shapes representing V and W in the same way we learn functions in basic set theory).
+    
+    This is all a long winded way to say that the existence of a similarity transform between two mappings implies that those mappings are <i>linear operators</i>. In fact, since similar matrices are linear operators, it turns out that they actually represent <i>the same transformation with respect to a different basis</i>. Therefore these operators are mapping objects within a vector space to different objects in the same vector space, AND their similar operators do the same thing, but from a different point of view. Another interesting note is that there exists an <i>entire family</i> of matrices similar to $A$.
+
+\subsection{Diagonalization}
+
+    There is a lot more to say about this in the context of eigenvalues and eigenvectors, and so our goal is to come up with useful factorizations of a transformation, i.e. generate "good" $P$ and $B$ matrices. One immediately useful $B$ matrix would be an upper triangular form of $A$ that displayed its eigenvalues. In fact, we can construct a diagonal matrix that displays only the eigenvalues of $A$. This process is called <b>diagonalization</b> and is usually denoted by $A\,=\,P^{-1}DP$, with $D$ being the diagonal matrix of eigenvalues.
+    
+Definition: Diagonalizable
+$\quad$$A$ is diagonalizable iff   $A$   has   $n$   linearly independent eigenvectors, and   $A$   is $n$ x $n$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
