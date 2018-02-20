@@ -23,3 +23,10 @@ notebook.tex
 
 # Ignore sed files
 sed*
+
+# Ignore tex files
+*.aux
+*.dvi
+*.log
+*.synctex.
+*.toc
