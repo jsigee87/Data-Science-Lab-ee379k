@@ -1,6 +1,7 @@
 ##################################################
 # Ignore autosaves/checkpoints
 *checkpoint*
+.jupyter
 
 # Ignore virtualenv 
 bin
@@ -10,10 +11,11 @@ local
 share
 *selfcheck.json
 
-# Ignore word temp files
+# Ignore temp files
 ~$*
 *TMP*
 *.tmp
+*.swp
 
 # Ignore automatically generated documents for 
 # notebook to pdf conversion
@@ -30,3 +32,6 @@ sed*
 *.log
 *.synctex.
 *.toc
+
+# Ignore dataset folder
+datasets
