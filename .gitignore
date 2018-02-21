@@ -1,4 +1,4 @@
-##################################################
+#################################################
 # Ignore autosaves/checkpoints
 *checkpoint*
 .jupyter
@@ -34,4 +34,4 @@ sed*
 *.toc
 
 # Ignore dataset folder
-datasets
+#datasets
