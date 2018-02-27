@@ -16,6 +16,7 @@ share
 *TMP*
 *.tmp
 *.swp
+.requirements.swp
 
 # Ignore automatically generated documents for 
 # notebook to pdf conversion
