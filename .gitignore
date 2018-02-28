@@ -44,4 +44,6 @@ sed*
 *.toc
 
 # Ignore dataset folder
-#datasets
+datasets
+# ignore book-pdf
+book-pdf
